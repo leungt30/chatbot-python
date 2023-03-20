@@ -1,0 +1,2 @@
+model_checkpoint_path: "/mnt/c/Users/cafen/Documents/CODE/chatbot/model.tflearn"
+all_model_checkpoint_paths: "/mnt/c/Users/cafen/Documents/CODE/chatbot/model.tflearn"

@@ -1,0 +1,43 @@
+DO GITHUB ANSWER
+delete the files to retrain
+
+to open venv do:
+source PathToVenv/bin/activate
+OLD: PathToVenv\Scripts\activate.bat
+
+
+
+extraciriculars
+aspiration/goals
+who do I look up to
+how can users get in touch with you
+what inspired you to create this website
+volunteer experience
+where are you from?
+
+what have I learned so far in comp sci courses
+most important skills a computer scientist can have
+recommend resources to others
+how much u code at home
+music 
+
+
+foods I like
+
+
+
+how many times have you been asked a question \
+
+
+
+
+
+are you a boy or a girl
+when did you graduate
+musics taste
+dream job
+movies
+passion/inspiration
+favourite car?
+goals
+
