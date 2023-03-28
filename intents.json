@@ -107,7 +107,7 @@
         },
         {"tag": "weaknesses",
         "patterns": ["What are your weaknesses?", "what would you consider to be your weaknesses?", "what do you think is your weakness", "what weaknesses do you have?"],
-        "responses": [":)"],
+        "responses": ["wow thats a whole interview question"],
         "context_set": ""
         },
         {"tag": "gender",

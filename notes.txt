@@ -2,8 +2,7 @@ DO GITHUB ANSWER
 delete the files to retrain
 
 to open venv do:
-source PathToVenv/bin/activate
-OLD: PathToVenv\Scripts\activate.bat
+source venv/bin/activate
 
 
 
