@@ -100,26 +100,30 @@ def bag_of_words(s,words): #generate bag of words
                 bag[i] = 1
     return numpy.array(bag)
 
-def chat():
-    print("Start talking with the bot! (type quit to stop)")
-    while True:
-        inp = input("You: ")
-        if inp.lower() == "quit":
-            break
-        results = model.predict([bag_of_words(inp,words)])[0] #results is a list of probabilities
-        results_index = numpy.argmax(results) #gives index of largest probability
-        inputTag = labels[results_index]
-        
-        #confidence check, if not too confident just say you dont understand
-        if results[results_index] > 0.7:
-            #find corresponding responses
-            for tag in data["intents"]:
-                if tag['tag'] == inputTag:
-                    responses = tag['responses']
-            #print one of the responses
-            print(random.choice(responses))
-        else:
-            print("I don't quite understand. Try rephrasing it or try a new question")
+def chat(inp):
+    # print("Start talking with the bot! (type quit to stop)")
+    # while True:
+        # inp = input("You: ")
+    results = model.predict([bag_of_words(inp,words)])[0] #results is a list of probabilities
+    results_index = numpy.argmax(results) #gives index of largest probability
+    inputTag = labels[results_index]
+    
+    #confidence check, if not too confident just say you dont understand
+    if results[results_index] > 0.7:
+        #find corresponding responses
+        for tag in data["intents"]:
+            if tag['tag'] == inputTag:
+                responses = tag['responses']
+        #print one of the responses
+        # print(random.choice(responses))
+        return (random.choice(responses))
+    else:
+        # print("I don't quite understand. Try rephrasing it or try a new question")
+        return ("I don't quite understand. Try rephrasing it or try a new question")
 
 print("Hey, I am a chatbot made by Timothy Leung. You can ask me questions and I'll answer as if I am Tim. Sometimes my responses change so ask me a question multiple times to learn more about me")
-chat()
+while (True):
+    inp = input("You: ")
+    if inp == "quit":
+        break
+    print(chat(inp))
